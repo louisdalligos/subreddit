@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="panel">
+		<form {{action loadList on="submit"}}>
+			<div class="row">
+				<div class="large-10 columns">
+					{{view Ember.TextField valueBinding="subreddit" id="subreddit" placeholder="Enter the subreddit here" required="true"}}
+				</div>
+				<div class="large-2 columns">
+					<button type="submit" class="button prefix">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>	
+	
+	<strong>Entries from /r/<span style="color: red">{{ subredditHeader }}</span></strong>
+	<ul class="entries">
+		{{#each link in model}}
+			<li>
+				{{#if link.thumbnailUrl}}
+					<img {{bindAttr src="link.thumbnailUrl"}}>
+				{{/if}}
+				<a {{bindAttr href="link.url"}} target="_blank">{{link.title}}</a>
+			</li>
+		{{else}}
+			<li>There are no entries as of the moment.</li>
+		{{/each}}
+	</ul>
+</div>

@@ -7,3 +7,6 @@ Ruby 1.9.2+ and Bundler is required:
        $ bundle install
        $ bundle exec rake db:migrate
        $ rails s
+
+== License
+Copyright 2013 Louis Dalligos. MIT License (see LICENSE for details)

@@ -1,9 +1,14 @@
 == Subreddit
 This is a simple Rails 3.2 app created to demonstrate the power of EmberJS. Display subreddit entries from Reddit API. Uses a simple form to fetch data base on user input and display a list of entries coming of Reddit website. Uses Zurb Foundation for styling. 
 
+== Requirements
+
+Ruby 1.9.3+
+Rails 3.2+
+
 == Installation
 
-Ruby 1.9.2+ and Bundler is required:
+Ruby 1.9.3+ and Bundler is required:
        $ bundle install
        $ bundle exec rake db:migrate
        $ rails s
